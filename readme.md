@@ -1,6 +1,6 @@
 # Chinese-Lorem-Ipsum
 
-> version: v0.1.1
+> version: v0.1.0
 
 ## 简介
 
