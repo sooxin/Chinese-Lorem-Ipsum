@@ -153,12 +153,13 @@
     </div>
 
     <script>
+      'use strict'
       // 是否为自定义文字字数，是则文本框显示，否则隐藏
       function isCustomerizedTextSize() {
         var textSizeOpts = document.getElementsByClassName("input-box");
         var customerizedOpt = document.getElementsByClassName("customerized-text-size")[0];
         var inputBox = document.getElementsByClassName("customerized-text-size-input-box")[0];
-        for (var i = 0; i < textSizeOpts.length; i++) {
+        for (let i = 0; i < textSizeOpts.length; i++) {
           bindEventWithSafty("click", textSizeOpts[i], function () {
             if (customerizedOpt.checked) {
               inputBox.style.display = "inline";
@@ -195,7 +196,7 @@
         // 得到文本类型radomTextType
         var textTypeOpts = document.getElementsByClassName("radom-text-type");
         var textType = "";
-        for (var i = 0; i < textTypeOpts.length; i++) {
+        for (let i = 0; i < textTypeOpts.length; i++) {
           if (textTypeOpts[i].checked) {
             textType = textTypeOpts[i].getAttribute("value");
           }
@@ -205,7 +206,7 @@
         // 得到文本风格
         var textStyleOpts = document.getElementsByClassName("radom-text-style");
         var textStyle = "";
-        for (var i = 0; i < textStyleOpts.length; i++) {
+        for (let i = 0; i < textStyleOpts.length; i++) {
           if (textStyleOpts[i].checked) {
             textStyle = textStyleOpts[i].getAttribute("value");
           }
@@ -215,7 +216,7 @@
         // 得到文本容量
         var textSizeOpts = document.getElementsByClassName("radom-text-size");
         var textSize = "";
-        for (var i = 0; i < textSizeOpts.length; i++) {
+        for (let i = 0; i < textSizeOpts.length; i++) {
           if (textSizeOpts[i].checked) {
             textSize = textSizeOpts[i].getAttribute("value");
           }
@@ -252,7 +253,7 @@
           return;
         }
         var plainCharacters = "";
-        for (var i = 0; i < textSize; i++) {
+        for (let i = 0; i < textSize; i++) {
           //var radomLocation = Math.floor(textLength*Math.random());
           plainCharacters += characterDB[getRadomNumber(textLength)];
         }
@@ -268,7 +269,7 @@
           return;
         }
         var characters = characterDB[getRadomNumber(textLength)];
-        for (var i = 1; i < textSize; i++) {
+        for (let i = 1; i < textSize; i++) {
           //var radomLocation = Math.floor(textLength*Math.random());
           if (Math.random() < 0.04) {
             // 前一个字符是标点则后一个字符不为标点
