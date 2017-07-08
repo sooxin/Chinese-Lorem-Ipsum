@@ -2,86 +2,17 @@
 <html lang="zh_cn">
 
 <head>
-  <!-- version 0.2.1 -->
+  <!-- version 0.2.1.1 -->
   <meta charset="utf-8" />
   <title>中文乱文假数生成器</title>
-  <style>
-    /* ============
-      common style
-      ============ */
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-size: 18px;
-      font-family: "微软雅黑";
-    }
-
-    .container {
-      width: 960px;
-      margin: 0px auto;
-      /* border: solid red 1px; */
-      padding: 10px;
-    }
-
-    section {
-      margin: 10px 0px;
-    }
-    /* button style */
-
-    .btn-wrapper {
-      text-align: center;
-    }
-
-    .btn {
-      width: 100px;
-      height: 40px;
-      border-width: 0;
-      font-size: 18px;
-      margin: 10px 0px;
-    }
-
-    .btn:hover {
-      cursor: pointer;
-      background-color: black;
-      color: white;
-    }
-    /* radio option style */
-
-    .input-box {
-      margin: 0px 10px;
-      display: inline-block;
-    }
-    /* ============
-      section option-panel style
-      ============ */
-
-    .customerized-text-size-input-box {
-      display: none;
-    }
-    /* ============
-      section generated-radom-text-box style
-      ============ */
-
-    .generated-radom-text {
-      display: inline-block;
-      line-height: 1.5em;
-      min-height: 100px;
-    }
-    /* ============
-      footer style
-      ============ */
-
-    footer {
-      text-align: center;
-    }
-  </style>
+  <link rel="stylesheet" href="./css/Chinese-Lorem-Ipsum.css" type="text/css"/>
 </head>
 
 <body>
   <div class="container">
     <header>
       <h1>中文乱文假数生成器</h1>
+      <h2>Chinese-Lorem-Ipsum Generator</h2>
       <hr>
     </header>
 
@@ -91,13 +22,11 @@
           <h3>文本类型： </h3>
           <div class="input-box">
             <input type="radio" value="simplified-Chinese" name="radom-text-type" id="type-simplified" class="radom-text-type" checked>
-            <label
-              for="type-simplified">简体中文</label>
+            <label for="type-simplified">简体中文</label>
           </div>
           <div class="input-box">
             <input type="radio" value="traditional-Chinese" name="radom-text-type" id="type-traditonal" class="radom-text-type">
-            <label
-              for="type-traditonal">繁体中文</label>
+            <label for="type-traditonal">繁体中文</label>
           </div>
         </form>
       </div>
@@ -108,42 +37,41 @@
           <div class="input-box">
             <input type="radio" value="rich-radom-text" name="radom-text-style" id="style-with-puctuations" class="radom-text-style"
               checked><label for="style-with-puctuations">带标点文本</label>
-            <div class="input-box">
-              <input type="radio" value="plain-radom-text" name="radom-text-style" id="style-without-puctuations" class="radom-text-style">
-              <label
-                for="style-without-puctuations">无符号文本</label>
-            </div>
+          </div>
+          <div class="input-box">
+            <input type="radio" value="plain-radom-text" name="radom-text-style" id="style-without-puctuations" class="radom-text-style">
+            <label for="style-without-puctuations">无符号文本</label>
+          </div>
         </form>
-        </div>
+      </div>
 
-        <div class="radom-text-size-wrapper">
-          <form>
-            <h3>文字字数：</h3>
-            <div class="input-box">
-              <input type="radio" value="200" name="radom-text-size" id="size-200" class="radom-text-size" checked>
-              <label
-                for="size-200">200字</label>
-            </div>
-            <div class="input-box">
-              <input type="radio" value="500" name="radom-text-size" id="size-500" class="radom-text-size"><label for="size-500">500字</label>
-            </div>
-            <div class="input-box">
-              <input type="radio" value="1000" name="radom-text-size" id="size-1000" class="radom-text-size"><label for="size-1000">1000字</label>
-            </div>
-            <div class="input-box customerized-text-size-box">
-              <input type="radio" value="-1" name="radom-text-size" id="size-any" class="radom-text-size customerized-text-size">
-              <label
-                for="size-any">自定义（
+      <div class="radom-text-size-wrapper">
+        <form>
+          <h3>文字字数：</h3>
+          <div class="input-box">
+            <input type="radio" value="200" name="radom-text-size" id="size-200" class="radom-text-size" checked>
+            <label for="size-200">200字</label>
+          </div>
+          <div class="input-box">
+            <input type="radio" value="500" name="radom-text-size" id="size-500" class="radom-text-size"><label for="size-500">500字</label>
+          </div>
+          <div class="input-box">
+            <input type="radio" value="1000" name="radom-text-size" id="size-1000" class="radom-text-size"><label for="size-1000">1000字</label>
+          </div>
+          <div class="input-box customerized-text-size-box">
+            <input type="radio" value="-1" name="radom-text-size" id="size-any" class="radom-text-size customerized-text-size">
+            <label for="size-any">自定义（
                 < 3000 字） <input type="text" value="50" class="customerized-text-size-input-box">
                   </label>
-            </div>
-          </form>
-        </div>
-        <div class="btn-wrapper">
-          <button class="btn generate-btn">生成文本</button>
+          </div>
+        </form>
+      </div>
+      <div class="btn-wrapper">
+        <br/>
+        <button class="btn generate-btn">生成文本</button>
 
-        </div>
-        <hr>
+      </div>
+      <hr>
     </section>
 
     <section class="generated-radom-text-box">
@@ -160,7 +88,8 @@
 
     <footer>
       <hr>
-      <p>designed and created by sooxin, find me at <a href="https://github.com/sooxin" target="_blank">GitHub</a></p>
+      <p>designed and created by <a class="link-btn" href="https://github.com/sooxin" target="_blank">sooxin</a>, fork and star
+        <a class="link-btn" href="https://github.com/sooxin/Chinese-Lorem-Ipsum" target="_blank">this project</a></p>
       <p>distributed under the MIT License</p>
     </footer>
   </div>

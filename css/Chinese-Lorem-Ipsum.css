@@ -1,0 +1,104 @@
+/* ============
+common style
+============ */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: "微软雅黑";
+}
+.container {
+    width: 960px;
+    margin: 0px auto;
+    /* border: solid red 1px; */
+    padding: 10px;
+}
+
+section {
+    margin: 10px 0px;
+}
+/* button style */
+
+.btn-wrapper {
+    text-align: center;
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    border-width: 0;
+    font-size: 18px;
+    margin: 10px 0px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+/* radio option style */
+
+.input-box {
+    margin: 0px 10px;
+    display: inline-block;
+}
+/* ============
+section option-panel style
+============ */
+
+.customerized-text-size-input-box {
+    display: none;
+}
+/* ============
+section generated-radom-text-box style
+============ */
+
+.generated-radom-text {
+    display: inline-block;
+    line-height: 1.5em;
+    min-height: 100px;
+}
+/* ============
+footer style
+============ */
+
+footer {
+    text-align: center;
+}
+
+.author-name {
+    background-color: black;
+    color: white;
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.author-github {
+    background-color: black;
+    color: white;
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+/* ============
+tools class style
+============ */
+/* style of a tag */
+
+.link-btn {
+    background-color: black;
+    color: white;
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.link-btn:hover {
+    color: black;
+    background-color: rgb(221, 221, 221);
+}
